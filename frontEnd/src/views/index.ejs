@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+    <title>Index | Gestion Promotions By Marjane</title>
+  </head>
+  <body class="text-blueGray-700 antialiased">
+    
+    
+
+    <section class="  pb-40 relative bg-blueGray-100">
+  
+      <div class="justify-center text-center flex flex-wrap p-5">
+        <div class="w-full md:w-6/12 px-12 md:px-4">
+          <img
+                      alt="..."
+                      class="align-middle border-none max-w-full h-auto rounded-lg"
+                      src="img/marjane-Maroc.png"
+                    />
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="block relative z-1 bg-blueGray-600">
+      <div class="container mx-auto">
+        <div class="justify-center flex flex-wrap">
+          <div class="w-full lg:w-12/12 px-4 -mt-24">
+            <div class="flex flex-wrap">
+              <div class="w-full lg:w-4/12 px-4">
+                <h5 class="text-xl font-semibold pb-4 text-center">
+                  Admin
+                </h5>
+                <a href="admin/login">
+                  <div
+                    class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                  >
+                    <img
+                      alt="..."
+                      class="align-middle border-none max-w-full h-auto rounded-lg"
+                      src="img/admin.png"
+                    />
+                  </div>
+                </a>
+              </div>
+
+              <div class="w-full lg:w-4/12 px-4">
+                <h5 class="text-xl font-semibold pb-4 text-center">
+                  Admin Center
+                </h5>
+                <a href="./pages/subAdmin/login.html">
+                  <div
+                    class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                  >
+                    <img
+                      alt="..."
+                      class="align-middle border-none max-w-full h-auto rounded-lg"
+                      src="img/admin.png"
+                    />
+                  </div>
+                </a>
+              </div>
+
+              <div class="w-full lg:w-4/12 px-4">
+                <h5 class="text-xl font-semibold pb-4 text-center">
+                  Manager
+                </h5>
+                <a href="./pages/Manager/login.html">
+                  <div
+                    class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                  >
+                    <img
+                      alt="..."
+                      class="align-middle border-none max-w-full h-auto rounded-lg"
+                      src="img/admin.png"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="pb-16 bg-blueGray-200 relative pt-32">
+      <div
+        class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+        style="transform: translateZ(0)"
+      >
+       
+          <polygon
+            class="text-blueGray-200 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+
+      
+    </section>
+    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+        style="transform: translateZ(0)"
+      >
+       
+          <polygon
+            class="text-blueGray-200 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        
+        
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              Copyright © <span id="get-current-year"></span> Gestion Promotions
+              <a
+                href="https://www.creative-tim.com?ref=njs-index"
+                class="text-blueGray-500 hover:text-blueGray-800"
+              >
+                Marjane
+              </a>
+              .
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+  <script>
+    /* Make dynamic date appear */
+    (function () {
+      if (document.getElementById("get-current-year")) {
+        document.getElementById(
+          "get-current-year"
+        ).innerHTML = new Date().getFullYear();
+      }
+    })();
+    /* Function for opning navbar on mobile */
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+    /* Function for dropdowns */
+    function openDropdown(event, dropdownID) {
+      let element = event.target;
+      while (element.nodeName !== "A") {
+        element = element.parentNode;
+      }
+      Popper.createPopper(element, document.getElementById(dropdownID), {
+        placement: "bottom-start",
+      });
+      document.getElementById(dropdownID).classList.toggle("hidden");
+      document.getElementById(dropdownID).classList.toggle("block");
+    }
+  </script>
+</html>

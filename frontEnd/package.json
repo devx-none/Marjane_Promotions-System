@@ -1,0 +1,33 @@
+{
+  "name": "marjane",
+  "version": "1.1.0",
+  "description": "Marjane - Gestion de promotion.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/notus-js.git"
+  },
+  "main": "index.ejs",
+  "scripts": {
+    "start": "browser-sync start --server --index \"./index.ejs\"",
+    "build:tailwind": "tailwind build assets/styles/index.css -o assets/styles/tailwind.css",
+    "build:fontawesome": "mkdir -p assets/vendor/@fortawesome/fontawesome-free/webfonts && mkdir -p assets/vendor/@fortawesome/fontawesome-free/css && cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts assets/vendor/@fortawesome/fontawesome-free/ && cp ./node_modules/@fortawesome/fontawesome-free/css/all.min.css assets/vendor/@fortawesome/fontawesome-free/css/all.min.css",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run build:fontawesome && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "@tailwindcss/forms": "0.2.1",
+    "axios": "^0.24.0",
+    "browser-sync": "2.26.14",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "path": "^0.12.7",
+    "tailwindcss": "2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.2.5",
+    "postcss": "8.2.8"
+  }
+}
