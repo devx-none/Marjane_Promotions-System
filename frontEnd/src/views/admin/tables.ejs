@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="/img/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/img/apple-icon.png"
-    />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png" />
     <link
       rel="stylesheet"
       href="/vendor/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="/styles/tailwind.css" />
-    <title>Tables | Marjan  Market</title>
+    <title>Tables | Marjan Market</title>
   </head>
   <body class="text-blueGray-700 antialiased">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <nav
         class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6"
@@ -53,7 +47,7 @@
                 id="notification-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/admin/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
@@ -70,7 +64,7 @@
                     ><img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="../../assets/img/team-1-800x800.jpg"
+                      src="/img/team-1-800x800.jpg"
                   /></span></div
               ></a>
               <div
@@ -78,11 +72,10 @@
                 id="user-responsive-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/admin/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
-                
               </div>
             </li>
           </ul>
@@ -97,9 +90,9 @@
                 <div class="w-6/12">
                   <a
                     class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
-                    href="../../index.html"
+                    href="/admin/dashboard"
                   >
-                    Marjane  Market
+                    Marjane Market
                   </a>
                 </div>
                 <div class="w-6/12 flex justify-end">
@@ -135,7 +128,7 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a
-                  href="./dashboard.html"
+                  href="/admin/dashboard"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i class="fas fa-tv mr-2 text-sm text-blueGray-300"></i>
@@ -145,27 +138,19 @@
 
               <li class="items-center">
                 <a
-                  href="./settings.html"
-                  class="text-xs uppercase py-3 font-bold block  text-pink-500 hover:text-pink-600"
+                  href="/admin/tables"
+                  class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
                 >
-                  <i class="fas fa-tools mr-2 text-sm text-blueGray-300 "></i>
+                  <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
                   Admin Center
                 </a>
               </li>
 
-              <li class="items-center">
-                <a
-                  href="./tables.html"
-                  class="text-xs uppercase py-3 font-bold block "
-                >
-                  <i class="fas fa-table mr-2 text-sm opacity-75"></i>
-                  Manager
-                </a>
-              </li>
+              
 
               <li class="items-center">
                 <a
-                  href="./maps.html"
+                  href="#"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i
@@ -175,13 +160,10 @@
                 </a>
               </li>
             </ul>
-
-          
-
           </div>
         </div>
       </nav>
-      <div class="relative md:ml-64 bg-blueGray-50 ">
+      <div class="relative md:ml-64 bg-blueGray-50">
         <nav
           class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
         >
@@ -190,7 +172,7 @@
           >
             <a
               class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-              href="./index.html"
+              href="/admin/dashboard"
               >Dashboard</a
             >
             <form
@@ -222,7 +204,7 @@
                     ><img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="../../assets/img/team-1-800x800.jpg"
+                      src="/img/team-1-800x800.jpg"
                   /></span>
                 </div>
               </a>
@@ -231,7 +213,7 @@
                 id="user-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/admin/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
@@ -271,7 +253,6 @@
                           </div>
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
@@ -330,11 +311,9 @@
                           </div>
                         </div>
                       </div>
-                     
                     </div>
                   </div>
                 </div>
-               
               </div>
             </div>
           </div>
@@ -359,9 +338,59 @@
                   </div>
                 </div>
                 <div class="block w-full overflow-x-auto">
-                  
-                  <!-- Projects table -->
-                  <!-- <table
+                  <div class="flex-auto px-4 lg:px-5 py-10 pt-5">
+                    <form action="/super/adCenter" method="post">
+                      <div class="relative mb-3">
+                        <label
+                          class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          for="grid-password"
+                          >Email</label
+                        ><input
+                          type="email"
+                          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150 email"
+                          placeholder="Email"
+                          name="email"
+                        />
+                        
+                          <div class="mb-5 py-5">
+                            <select class="form-select appearance-none
+                              block
+                              w-full
+                              px-3
+                              py-1.5
+                              text-base
+                              font-normal
+                              text-gray-700
+                              bg-white bg-clip-padding bg-no-repeat
+                              border border-solid border-gray-300
+                              rounded
+                              transition
+                              ease-in-out
+                              m-0
+                              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="center">
+                                <option selected>Center</option>
+                                <% centers.forEach(center=>{ %>
+                                <option value="<%=center.id%>"><%=center.name %></option>
+                                
+                                <% }) %> 
+                            </select>
+                          </div>
+                        
+                        <button
+                          class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          type="submit"
+                         
+                          
+                        >
+                          ADD
+                        </button>
+                      </div>
+
+                      <div class="text-center mt-6"></div>
+                    </form>
+                  </div>
+                  <!--  table admin center-->
+                  <table
                     class="items-center w-full bg-transparent border-collapse"
                   >
                     <thead>
@@ -369,101 +398,55 @@
                         <th
                           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                         >
-                          Project
+                          Full Name
                         </th>
                         <th
                           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                         >
-                          Budget
+                          Email
                         </th>
                         <th
                           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                         >
-                          Status
+                          Center
                         </th>
                         <th
                           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                         >
-                          Users
+                          Created_at
                         </th>
-                        <th
-                          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                        >
-                          Completion
-                        </th>
+
                         <th
                           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                         ></th>
                       </tr>
                     </thead>
                     <tbody>
+                      <% adminsCenter.forEach(admin=>{ %>
                       <tr>
                         <th
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
                         >
-                          <img
-                            src="../../assets/img/bootstrap.jpg"
-                            class="h-12 w-12 bg-white rounded-full border"
-                            alt="..."
-                          />
                           <span class="ml-3 font-bold text-blueGray-600">
-                            Argon Design System
+                            name
                           </span>
                         </th>
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                         >
-                          $2,500 USD
+                          <%=admin.email %>
                         </td>
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                         >
-                          <i class="fas fa-circle text-orange-500 mr-2"></i>
-                          pending
+                          <!-- <i class="fas fa-circle text-orange-500 mr-2"></i> -->
                         </td>
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                         >
-                          <div class="flex">
-                            <img
-                              src="../../assets/img/team-1-800x800.jpg"
-                              alt="..."
-                              class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                            />
-                            <img
-                              src="../../assets/img/team-2-800x800.jpg"
-                              alt="..."
-                              class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                            />
-                            <img
-                              src="../../assets/img/team-3-800x800.jpg"
-                              alt="..."
-                              class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                            />
-                            <img
-                              src="../../assets/img/team-4-470x470.png"
-                              alt="..."
-                              class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                            />
-                          </div>
+                          <div class="flex"><%= admin.createdAt %></div>
                         </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">60%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-red-200"
-                              >
-                                <div
-                                  style="width: 60%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
+
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
                         >
@@ -481,48 +464,19 @@
                             <a
                               href="#pablo"
                               class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                              >Modify</a
+                              >Delete</a
                             >
                           </div>
                         </td>
                       </tr>
-                     
+                      <% }) %>
                     </tbody>
-                  </table> -->
-                  <div class="flex-auto px-4 lg:px-10 py-10 pt-10">
-                  <form>
-                    <div class="relative w-full mb-3">
-                      <label
-                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        for="grid-password"
-                        >Email</label
-                      ><input
-                        type="email"
-                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
-                   
-
-                    </div>
-                    <div class="text-center mt-6">
-                      <button
-                        class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1  ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                       ADD
-                      </button>
-                    </div>
-                  </form>
-                  </div>
+                  </table>
                 </div>
               </div>
             </div>
-           
           </div>
-         
         </div>
-        
       </div>
       <footer class="block py-4">
         <div class="container mx-auto px-4">
@@ -543,19 +497,19 @@
                 </a>
               </div>
             </div>
-            
           </div>
         </div>
-      </footer> 
+      </footer>
     </div>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script type="text/javascript">
       /* Make dynamic date appear */
       (function () {
         if (document.getElementById("get-current-year")) {
-          document.getElementById(
-            "get-current-year"
-          ).innerHTML = new Date().getFullYear();
+          document.getElementById("get-current-year").innerHTML =
+            new Date().getFullYear();
         }
       })();
       /* Sidebar - Side navigation menu on mobile/responsive mode */
@@ -578,6 +532,40 @@
         document.getElementById(dropdownID).classList.toggle("hidden");
         document.getElementById(dropdownID).classList.toggle("block");
       }
+
+      //added admin center
+      // const admins = require("./controller/admin.js");
+     
+      let btnAdd = document.querySelector("#btnAdd");
+      // btnAdd.addEventListener("click", (e) => {
+
+      //   e.preventDefault();
+      //   alert("test");
+      //   const email = document.querySelector(".email").value;
+      //   const admin = localStorage.getItem("super");
+      //   // admins.adminCenter(email, admin);
+        
+      //   axios
+      //     .post("http://127.0.0.1:5000/super/adCenter", {
+      //       data: {
+      //         email: JSON.stringify(email),
+      //       },
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //         "Accept": "application/json",
+      //         "Authorization": `Bearer ${admin}`,
+      //       },
+      //     })
+      //     .then((response) => {
+      //       console.log(response);
+      //     })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     });
+      
+    
+  //  });
     </script>
   </body>
 </html>
+

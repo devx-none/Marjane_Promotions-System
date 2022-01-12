@@ -103,6 +103,19 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.post('/all', async (req, res) => {
+    const getcategory = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_MANAGER_SECRET);
+        const connection = getConnection()
+        const manager = await connection.getRepository("manager").findOne({
+            where: {
+                id: getcategory.id
+            },
+            relations: ['category', 'center', 'center.adminCenter']
+        })
+
+    
+})
+
 
 
 

@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="../../assets/img/apple-icon.png"
+      href="/img/apple-icon.png"
     />
     <link
       rel="stylesheet"
@@ -17,9 +17,9 @@
     />
     <link
       rel="stylesheet"
-      href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      href="/vendor/@fortawesome/fontawesome-free/css/all.min.css"
     />
-    <link rel="stylesheet" href="../../assets/styles/tailwind.css" />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
     <title>Dashboard | Marjane Promotions</title>
   </head>
   <body class="text-blueGray-700 antialiased">
@@ -57,7 +57,7 @@
                 id="notification-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/adminCenter/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
@@ -76,7 +76,7 @@
                     ><img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="../../assets/img/team-1-800x800.jpg"
+                      src="/img/team-1-800x800.jpg"
                   /></span></div
               ></a>
               <div
@@ -84,7 +84,7 @@
                 id="user-responsive-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/adminCenter/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
@@ -141,7 +141,7 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a
-                  href="./dashboard.html"
+                  href="/adminCenter/dashboard"
                   class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
                 >
                   <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
@@ -151,18 +151,10 @@
               </li>
 
             
+      
               <li class="items-center">
                 <a
-                  href="./tables.html"
-                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-                >
-                  <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
-                  Admin Center
-                </a>
-              </li>
-              <li class="items-center">
-                <a
-                  href="./tables.html"
+                  href="/adminCenter/tables"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
@@ -171,7 +163,7 @@
               </li>
               <li class="items-center">
                 <a
-                  href="./tables.html"
+                  href="adminCenter/promotion"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
@@ -183,43 +175,8 @@
             </ul>
 
             <!-- Divider -->
-            <hr class="my-4 md:min-w-full" />
-            <!-- Heading -->
-            <h6
-              class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-            >
-              Auth Layout Pages
-            </h6>
-            <!-- Navigation -->
-
-            <ul
-              class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
-            >
-              <li class="items-center">
-                <a
-                  href="../auth/login.html"
-                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                >
-                  <i
-                    class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"
-                  ></i>
-                  Login
-                </a>
-              </li>
-
-              <li class="items-center">
-                <a
-                  href="../auth/register.html"
-                  class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                >
-                  <i
-                    class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
-                  ></i>
-                  Register
-                </a>
-              </li>
-            </ul>           
-          
+           
+            
           </div>
         </div>
       </nav>
@@ -232,7 +189,7 @@
           >
             <a
               class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-              href="./dashboard.html"
+              href="adminCenter/dashboard"
               >Dashboard</a
             >
             <form
@@ -264,7 +221,7 @@
                     ><img
                       alt="..."
                       class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="../../assets/img/team-1-800x800.jpg"
+                      src="/img/team-1-800x800.jpg"
                   /></span>
                 </div>
               </a>
@@ -273,7 +230,7 @@
                 id="user-dropdown"
               >
                 <a
-                  href="#pablo"
+                  href="/adminCenter/logout"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                   >Logout</a
                 >
@@ -442,201 +399,7 @@
           </div>
           <div class="flex flex-wrap mt-4">
            
-            <!-- <div class="w-full xl:w-4/12 px-4">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
-              >
-                <div class="rounded-t mb-0 px-4 py-3 border-0">
-                  <div class="flex flex-wrap items-center">
-                    <div
-                      class="relative w-full px-4 max-w-full flex-grow flex-1"
-                    >
-                      <h3 class="font-semibold text-base text-blueGray-700">
-                        Social traffic
-                      </h3>
-                    </div>
-                    <div
-                      class="relative w-full px-4 max-w-full flex-grow flex-1 text-right"
-                    >
-                      <button
-                        class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        See all
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="block w-full overflow-x-auto">
-                  <!-- Projects table -->
-                  <!-- <table
-                    class="items-center w-full bg-transparent border-collapse"
-                  >
-                    <thead class="thead-light">
-                      <tr>
-                        <th
-                          class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                        >
-                          Referral
-                        </th>
-                        <th
-                          class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                        >
-                          Visitors
-                        </th>
-                        <th
-                          class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px"
-                        ></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                        >
-                          Facebook
-                        </th>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          1,480
-                        </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">60%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-red-200"
-                              >
-                                <div
-                                  style="width: 60%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                        >
-                          Facebook
-                        </th>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          5,480
-                        </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">70%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-emerald-200"
-                              >
-                                <div
-                                  style="width: 70%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                        >
-                          Google
-                        </th>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          4,807
-                        </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">80%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-purple-200"
-                              >
-                                <div
-                                  style="width: 80%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                        >
-                          Instagram
-                        </th>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          3,678
-                        </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">75%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-lightBlue-200"
-                              >
-                                <div
-                                  style="width: 75%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-lightBlue-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
-                        >
-                          twitter
-                        </th>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          2,645
-                        </td>
-                        <td
-                          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                        >
-                          <div class="flex items-center">
-                            <span class="mr-2">30%</span>
-                            <div class="relative w-full">
-                              <div
-                                class="overflow-hidden h-2 text-xs flex rounded bg-orange-200"
-                              >
-                                <div
-                                  style="width: 30%"
-                                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table> -->
+            
                 </div>
               </div>
             </div> -->

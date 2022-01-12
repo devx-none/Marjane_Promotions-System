@@ -42,7 +42,8 @@ router.post('/add', async (req, res) => {
     res.json(admin)
 })
 
-router.post('/adCenter', isSuper, async (req, res) => {
+// router.post('/adCenter', isSuper, async (req, res) => {
+    router.post('/adCenter',isSuper, async (req, res) => {
     const password = await generatePassword();
     const connection = getConnection()
     const { email } = req.body

@@ -18,7 +18,17 @@ const router = Router();
 //     }
 // ]
 
-
+router.get('/all', async (req, res) => {
+    const connection = getConnection()
+    console.log(connection);
+    const centers = await connection
+        .getRepository("center")
+        .find()
+        .catch(error => {
+            console.log(error);
+        })
+    res.json(centers)
+})
 
 
 router.post('/add', isSuper, async (req, res) => {

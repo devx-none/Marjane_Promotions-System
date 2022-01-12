@@ -1,13 +1,13 @@
 import { getConnection } from "typeorm";
 import { Router } from "express"
 import { adminCenter, manager ,logs } from "../models";
-import { hashPassword, checkPassword, generateToken, isAdCenter, generatePassword, sendEmail, verifyToken, localLogs } from "../middleware";
+import { hashPassword, checkPassword, generateToken, isAdCenter, generatePassword, sendEmail, verifyToken, localLogs, isSuper } from "../middleware";
 
 
 const router = Router();
 
 
-router.get('/all', isAdCenter, async (req, res) => {
+router.get('/all', async (req, res) => {
     const connection = getConnection()
 
     console.log(connection);

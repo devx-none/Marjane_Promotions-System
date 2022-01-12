@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "Marjane - Gestion de promotion.",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/notus-js.git"
+    "type": "",
+    "url": ""
   },
   "main": "index.ejs",
   "scripts": {
@@ -23,6 +23,7 @@
     "browser-sync": "2.26.14",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "node-localstorage": "^2.2.1",
     "path": "^0.12.7",
     "tailwindcss": "2.0.4"
   },

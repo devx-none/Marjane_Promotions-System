@@ -5,17 +5,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="../../assets/img/apple-icon.png"
+      href="/img/apple-icon.png"
     />
     <link
       rel="stylesheet"
-      href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      href="/vendor/@fortawesome/fontawesome-free/css/all.min.css"
     />
-    <link rel="stylesheet" href="../../assets/styles/tailwind.css" />
+    <link rel="stylesheet" href="/styles/tailwind.css" />
     <title>Login | Manager</title>
   </head>
   <body class="text-blueGray-700 antialiased">
@@ -30,7 +30,7 @@
         >
           <a
             class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            href="./../../index.html"
+            href=""
             >Marjane Market</a
           ><button
             class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -53,7 +53,7 @@
       <section class="relative w-full h-full py-40 min-h-screen">
         <div
           class="absolute top-0 w-full h-full bg-blueGray-800 bg-full bg-no-repeat"
-          style="background-image: url(../../assets/img/register_bg_2.png)"
+          style="background-image: url(/img/register_bg_2.png)"
         ></div>
         <div class="container mx-auto px-4 h-full">
           <div class="flex content-center items-center justify-center h-full">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
                   
-                  <form>
+                  <form action="/manager/login" method="post">
                     <div class="relative w-full mb-3">
                       <label
                         class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -82,6 +82,7 @@
                         type="email"
                         class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         placeholder="Email"
+                        name="email"
                       />
                     </div>
                     <div class="relative w-full mb-3">
@@ -93,6 +94,7 @@
                         type="password"
                         class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         placeholder="Password"
+                        name="password"
                       />
                     </div>
                     <!-- <div>
@@ -110,7 +112,7 @@
                     <div class="text-center mt-6">
                       <button
                         class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                        type="button"
+                        type="submit"
                       >
                        Connect
                       </button>
