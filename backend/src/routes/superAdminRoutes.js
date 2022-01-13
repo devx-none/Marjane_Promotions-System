@@ -46,9 +46,10 @@ router.post('/add', async (req, res) => {
     router.post('/adCenter',isSuper, async (req, res) => {
     const password = await generatePassword();
     const connection = getConnection()
-    const { email } = req.body
+    const { email ,center } = req.body
     let admin = new adminCenter();
     admin.email = email;
+    admin.center = center;
     admin.password = await hashPassword(password);
 
     //Send Email 

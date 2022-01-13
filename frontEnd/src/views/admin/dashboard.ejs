@@ -57,9 +57,9 @@
                 id="notification-dropdown"
               >
                 <a
-                  href="/admin/logout"
+                  href="#"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Logout</a
+                  id="logout">Logout</a
                 >
                 
                 
@@ -84,9 +84,9 @@
                 id="user-responsive-dropdown"
               >
                 <a
-                  href="/admin/logout"
+                  href="#"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Logout</a
+                  id="logout">Logout</a
                 >
               
               </div>
@@ -238,9 +238,9 @@
                 id="user-dropdown"
               >
                 <a
-                  href="/admin/logout"
+                  href="#"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Logout</a
+                  id="logout">Logout</a
                 >
                 <div
                   class="h-0 my-2 border border-solid border-blueGray-100"
@@ -381,14 +381,7 @@
            
           </div>
           <div class="flex flex-wrap mt-4">
-            <% if (typeof token != "undefined") { %>
-              <!-- make user available to script tag -->
-              <% var token = token %>
-              <script>
-                let token =  JSON.stringify(token) 
-                localStorage.setItem('super', JSON.stringify({'super': token}));
-              </script>
-            <% } %>
+          
             
                 </div>
               </div>
@@ -420,6 +413,8 @@
         </div>
       </div>
     </div>
+
+ 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       charset="utf-8"
@@ -675,5 +670,14 @@
 
       
     </script>
+
+<% if (typeof token != "undefined") { %>
+  <!-- make user available to script tag -->
+  <% var token = token %>
+  <script>
+    let token =  <%-JSON.stringify(token)%>;
+    localStorage.setItem('super', token);
+  </script>
+<% } %>
   </body>
 </html>

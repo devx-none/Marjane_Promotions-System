@@ -152,5 +152,26 @@
       "message": " Manager :4b19eb40-4b64-4152-81da-4dae9c1b1f2d changed the promotion status: 4c3385b7-75f6-441c-bc3f-7ad5f3824adf ",
       "status": "created",
       "createdAt": "2022-01-12T14:18:40.829Z"
+   },
+   {
+      "id": "14479915-45ec-4b94-b8c8-9a5219c7d189",
+      "target": "1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d",
+      "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: d4928bb0-f164-4b96-ac26-db33718defce ",
+      "status": "created",
+      "createdAt": "2022-01-12T23:42:42.901Z"
+   },
+   {
+      "id": "ece6c646-db18-48d7-ac15-b5e503b54afd",
+      "target": "1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d",
+      "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: 32b05353-f29e-47a9-b3d1-21432bcbc477 ",
+      "status": "created",
+      "createdAt": "2022-01-12T23:51:11.201Z"
+   },
+   {
+      "id": "06939c43-8cb8-46c0-adfd-1fb7c5bf30cf",
+      "target": "1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d",
+      "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: 064f69dc-86df-416f-aa91-c7e2d8bd1300 ",
+      "status": "created",
+      "createdAt": "2022-01-13T00:08:13.958Z"
    }
 ]

@@ -1,12 +1,12 @@
 const express = require('express');
 const newRouter = express.Router();
 const axios = require('axios');
-const qs = require("querystring");
 
-// if (typeof localStorage === "undefined" || localStorage === null) {
-//   var LocalStorage = require('node-localstorage').LocalStorage;
-//   localStorage = new LocalStorage('./scratch');
-// }
+
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
 
 
 newRouter.get("/",(req, res)=>{
@@ -18,6 +18,9 @@ newRouter.get('/admin/login',(req, res)=>{
 
 newRouter.get("/admin/dashboard",(req, res)=>{
   res.render('admin/dashboard');
+})
+newRouter.get('/admin/tables',(req, res)=>{
+  res.render('admin/tables');
 })
 
 newRouter.get('/adminCenter/login',(req, res)=>{
@@ -54,21 +57,21 @@ newRouter.get('/adminCenter/promotions',(req, res)=>{
 })
 
 //list admin center
-newRouter.get('/admin/tables',(req, res)=>{
+// newRouter.get('/admin/tables',(req, res)=>{
  
 
-  axios.all([axios.get(`http://127.0.0.1:5000/admin/all`),
-  axios.get(`http://localhost:5000/center/all`)])
-.then(axios.spread((admins, centers) => {  
-      res.render('admin/tables',{adminsCenter : admins.data ,centers : centers.data });
+//   axios.all([axios.get(`http://127.0.0.1:5000/admin/all`),
+//   axios.get(`http://localhost:5000/center/all`)])
+// .then(axios.spread((admins, centers) => {  
+//       res.render('admin/tables',{adminsCenter : admins.data ,centers : centers.data });
 
-console.log(admins.data,centers.data);
-}))
-.catch(error => console.log(error));
+// console.log(admins.data,centers.data);
+// }))
+// .catch(error => console.log(error));
 
  
-  console.log('success');
-})
+//   console.log('success');
+// })
 
 
 
@@ -96,9 +99,8 @@ axios({
   .then( (response) =>{
     
     console.log(response);
-    localStorage.setItem('super',response.data.token)
-    console.log(`token :${localStorage.getItem('super')}`);
-    res.render('admin/dashboard',{token:localStorage.getItem('super')});
+    console.log(`token ::${response.data.token}`);
+    res.render('admin/dashboard',{token:response.data.token});
   })
   .catch(function (error) {
     
@@ -115,33 +117,33 @@ axios({
 
 
 // add an admin center
-newRouter.post('/super/adCenter',(req, res)=>{
-  console.log("rani mchit backend");
-  const email = req.body.email;
-  const center = req.body.center;
-  const admin = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkZDJmM2U1LWJmZTMtNDNlNy05ZjliLWFiNDg1MTM1NWYyZCIsImVtYWlsIjoiZWxtYWhkaUBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE2NDIwMTg0NTYsImV4cCI6MTY0MjEwNDg1Nn0.pG7o7CdyCe5okHUJsmptB229sqWsLGabGJ8AFIOauM';
-  console.log(admin);
-  axios
-    .post("http://127.0.0.1:5000/super/adCenter", {
-      data: {
-        email: email,
-        centerId: center
-      },
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        'Authorization': `Bearer ${admin}`,
-      },
-    })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch(function (error ) {
-      console.log(error);
-    });
+// newRouter.post('/super/adCenter',(req, res)=>{
+//   console.log("rani mchit backend");
+//   const email = req.body.email;
+//   const center = req.body.center;
+//   const admin = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkZDJmM2U1LWJmZTMtNDNlNy05ZjliLWFiNDg1MTM1NWYyZCIsImVtYWlsIjoiZWxtYWhkaUBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE2NDIwMTg0NTYsImV4cCI6MTY0MjEwNDg1Nn0.pG7o7CdyCe5okHUJsmptB229sqWsLGabGJ8AFIOauM';
+//   console.log(admin);
+//   axios
+//     .post("http://127.0.0.1:5000/super/adCenter", {
+//       data: {
+//         email: email,
+//         centerId: center
+//       },
+//       headers: {
+//         "Content-Type": "application/json",
+//         "Accept": "application/json",
+//         'Authorization': `Bearer ${admin}`,
+//       },
+//     })
+//     .then((response) => {
+//       console.log(response);
+//     })
+//     .catch(function (error ) {
+//       console.log(error);
+//     });
 
 
-});
+// });
   
 //login admin center
 

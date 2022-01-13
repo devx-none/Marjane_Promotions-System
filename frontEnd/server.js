@@ -16,6 +16,7 @@ app.use(express.static("public"));
 app.use('/styles',express.static(__dirname+'public/styles'))
 app.use('/img',express.static(__dirname+'public/img'))
 app.use('/vendor',express.static(__dirname+'public/vendor'))
+app.use(express.static("src"));
 
 //view pages
 app.set('views','./src/views');
