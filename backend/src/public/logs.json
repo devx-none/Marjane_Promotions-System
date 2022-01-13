@@ -173,5 +173,12 @@
       "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: 064f69dc-86df-416f-aa91-c7e2d8bd1300 ",
       "status": "created",
       "createdAt": "2022-01-13T00:08:13.958Z"
+   },
+   {
+      "id": "8af71296-ed3e-48c4-b8f7-831d4710ec24",
+      "target": "1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d",
+      "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: b6100cfd-6c7c-4719-95f1-64cd1f87675d ",
+      "status": "created",
+      "createdAt": "2022-01-13T19:23:55.791Z"
    }
 ]

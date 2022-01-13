@@ -671,13 +671,6 @@
       
     </script>
 
-<% if (typeof token != "undefined") { %>
-  <!-- make user available to script tag -->
-  <% var token = token %>
-  <script>
-    let token =  <%-JSON.stringify(token)%>;
-    localStorage.setItem('super', token);
-  </script>
-<% } %>
+
   </body>
 </html>

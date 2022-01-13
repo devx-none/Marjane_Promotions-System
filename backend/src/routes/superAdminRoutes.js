@@ -52,6 +52,8 @@ router.post('/add', async (req, res) => {
     admin.center = center;
     admin.password = await hashPassword(password);
 
+    console.log(admin.center);
+
     //Send Email 
     sendEmail(email, password);
     admin = await connection.getRepository("admin_center").save(admin)

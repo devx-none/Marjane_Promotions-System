@@ -2,7 +2,6 @@ const express = require('express');
 const newRouter = express.Router();
 const axios = require('axios');
 
-
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require('node-localstorage').LocalStorage;
   localStorage = new LocalStorage('./scratch');
@@ -19,12 +18,16 @@ newRouter.get('/admin/login',(req, res)=>{
 newRouter.get("/admin/dashboard",(req, res)=>{
   res.render('admin/dashboard');
 })
-newRouter.get('/admin/tables',(req, res)=>{
-  res.render('admin/tables');
-})
+// newRouter.get('/admin/tables',(req, res)=>{
+//   res.render('admin/tables');
+// })
 
 newRouter.get('/adminCenter/login',(req, res)=>{
   res.render('subAdmin/login');
+})
+
+newRouter.get('/admincenter/tables',(req, res)=>{
+  res.render('subAdmin/tables');
 })
 
 //page login manager
@@ -45,10 +48,6 @@ newRouter.get('/adminCenter/dashboard',(req, res)=>{
   res.render('subAdmin/dashboard');
 })
 
-//admin center table
-newRouter.get('/adminCenter/tables',(req, res)=>{
-  res.render('subAdmin/tables');
-})
 
 //page promotion 
 newRouter.get('/adminCenter/promotions',(req, res)=>{
@@ -57,28 +56,26 @@ newRouter.get('/adminCenter/promotions',(req, res)=>{
 })
 
 //list admin center
-// newRouter.get('/admin/tables',(req, res)=>{
+newRouter.get('/admin/tables',async(req, res)=>{
  
 
-//   axios.all([axios.get(`http://127.0.0.1:5000/admin/all`),
-//   axios.get(`http://localhost:5000/center/all`)])
-// .then(axios.spread((admins, centers) => {  
-//       res.render('admin/tables',{adminsCenter : admins.data ,centers : centers.data });
+  axios.all([axios.get(`http://127.0.0.1:5000/admin/all`),
+  axios.get(`http://localhost:5000/center/all`)])
+.then(axios.spread((admins, centers) => {  
+      res.render('admin/tables',{adminsCenter : admins.data ,centers : centers.data });
 
-// console.log(admins.data,centers.data);
-// }))
-// .catch(error => console.log(error));
+console.log(admins.data,centers.data);
+}))
+.catch(error => console.log(error));
 
  
-//   console.log('success');
-// })
-
-
-
-
-newRouter.get('/admin/tables',(req, res)=>{
-    res.render('admin/tables');
+  console.log('success');
 })
+
+
+
+
+
 
 
 
