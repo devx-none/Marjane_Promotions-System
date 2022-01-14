@@ -13,7 +13,7 @@ router.get('/all', async (req, res) => {
     console.log(connection);
     const admins = await connection
         .getRepository("admin_center")
-        .find()
+        .find({ relations: ['center'] })
         .catch(error => {
             console.log(error);
         })
@@ -48,13 +48,23 @@ router.post('/add', async (req, res, next) => {
 
 router.post('/addManger',isAdCenter, async (req, res, next) => {
     const password = await generatePassword();
-    const connection = getConnection()
-    const { name , email  ,center ,category} = req.body
+    
+    const { name , email ,category} = req.body
+
+    const getAdminCenter = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_CENTER_SECRET);
+    console.log(getAdminCenter.id);
+        const connection = getConnection()
+        const getcenter = await connection.getRepository("center").findOne({
+            where: {
+                adminCenter: getAdminCenter.id
+            }
+        })
+
     let managerRayon = new manager();
     managerRayon.name = name
     managerRayon.email = email;
     managerRayon.password = await hashPassword(password);
-    managerRayon.center = center
+    managerRayon.center = getcenter.id
     managerRayon.category = category
 
     //Send Email 

@@ -1,6 +1,22 @@
 export class Admin {
     data;
-
+    LoginAdmin = async (email , password ) => {
+      let myHeaders = new Headers();
+      myHeaders.append("Accept", "application/json");
+      myHeaders.append("Content-Type", "application/json");
+      let raw = JSON.stringify({
+        email ,
+        password
+      });
+      let requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+      };
+      let result = await fetch(`http://localhost:5000/super/login`, requestOptions);
+       
+      return (this.data = await result.json());
+    };
     
     createAdminCenter = async (email, center) => {
         const admin = localStorage.getItem('super');

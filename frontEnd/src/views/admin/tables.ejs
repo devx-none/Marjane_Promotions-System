@@ -371,7 +371,7 @@
                               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none center" aria-label="Default select example" name="center" id="center">
                                 <option selected>Center</option>
                                 <% centers.forEach(center=>{ %>
-                                <option value="<%=center.id%>"><%=center.name %></option>
+                                <option value="<%=center.id%>"><%=center.name %> (<%=center.city %>) </option>
                                 
                                 <% }) %> 
                             </select>
@@ -441,7 +441,7 @@
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                         >
                           <!-- <i class="fas fa-circle text-orange-500 mr-2"></i> -->
-                          <%=admin.center %>  %> 
+                          <%=admin.center %> 
                         </td>
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
@@ -505,7 +505,7 @@
     </div>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="/controllers/methods/admin.js"></script>
+    <script type="module" src="/controllers/methods/createAdminCenter.js"></script>
 
     <script type="text/javascript">
       /* Make dynamic date appear */

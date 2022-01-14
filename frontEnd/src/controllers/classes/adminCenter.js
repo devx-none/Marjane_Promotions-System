@@ -20,16 +20,15 @@ export class AdminCenter {
         return (this.data = await result.json());
       };
     
-    createManger = async (name, email , center ,category) => {
-        const manager = localStorage.getItem('manager');
+    createManager = async (name, email ,category) => {
+        const admin = localStorage.getItem('admin');
         let myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("authorization", `bearer ${manager}`);
+        myHeaders.append("authorization", `bearer ${admin}`);
         let raw = JSON.stringify({
           name ,
           email ,
-          center ,
           category
         });
         let requestOptions = {

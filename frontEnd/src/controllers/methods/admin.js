@@ -1,18 +1,38 @@
 import { Admin } from '../classes/index.js';
 
-const adminCenter = new Admin();
+const admin = new Admin();
 
 var $ = (className) => {
     return document.querySelector(className);
   };
 
-  //Added new admin center
-$('#btnAdd').addEventListener("click",async(e)=>{
-e.preventDefault();
-const getAdmins = await adminCenter.createAdminCenter($('#email').value,$('#center').value)
-// if(adminCenter.data.response){
+  //login
+  $('#connect').addEventListener("click",async(e)=>{
+    e.preventDefault();
+    await admin.LoginAdmin($('#email').value,$('#password').value)
 
-//     console.log(adminCenter.data.response);
+    if(admin.data.token){
+      localStorage.setItem('super',admin.data.token)
+      location.replace('/admin/dashboard');
+     }
+    
+     
+    })
+
+  //Added new admin center
+  
+// function  addAdminCenter()
+// {
+// // $('#btnAdd').addEventListener("click",async(e)=>{
+// e.preventDefault();
+// alert('Please')
+// const getAdmins = await adminCenter.createAdminCenter($('#email').value,$('#center').value)
+// // if(adminCenter.data.response){
+
+// //     console.log(adminCenter.data.response);
+// // }
+// // location.replace('/admin/tables');
+// console.log(getAdmins);
+// // })
 // }
-console.log(getAdmins);
-})
+// addAdminCenter();

@@ -21,12 +21,12 @@ var $ = (className) => {
     })
 
   //Added new admin Manager
-$('#AddBtn').addEventListener("click",async(e)=>{
-e.preventDefault();
-const manager = await adminCenter.createManger($('#name').value,$('#email').value,$('#center').value,$('#category').value)
-// if(adminCenter.data.response){
+// $('#AddBtn').addEventListener("click",async(e)=>{
+// e.preventDefault();
+// const manager = await adminCenter.createManger($('#name').value,$('#email').value,$('#center').value,$('#category').value)
+// // if(adminCenter.data.response){
 
-//     console.log(adminCenter.data.response);
-// }
-console.log(manager);
-})
+// //     console.log(adminCenter.data.response);
+// // }
+// console.log(manager);
+// })

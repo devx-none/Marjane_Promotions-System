@@ -36,7 +36,7 @@
           </button>
           <a
             class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
-            href="../../index.html"
+            href="#"
           >
             Marjane Market
           </a>
@@ -352,7 +352,7 @@
                 </div>
                 <div class="block w-full overflow-x-auto">
                   <div class="flex-auto px-4 lg:px-5 py-10 pt-5">
-                    <form action="/manager/new" method="post">
+                    <form>
                       <div class="relative mb-3">
                         <label
                           class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -377,29 +377,7 @@
                         id="email"
                       />
                         
-                          <!-- <div class="mb-5 py-5">
-                            <select class="form-select appearance-none
-                              block
-                              w-full
-                              px-3
-                              py-1.5
-                              text-base
-                              font-normal
-                              text-gray-700
-                              bg-white bg-clip-padding bg-no-repeat
-                              border border-solid border-gray-300
-                              rounded
-                              transition
-                              ease-in-out
-                              m-0
-                              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="center">
-                                <option selected>Center</option>
-                               
-                                <option value=""></option>
-                                
-                                
-                            </select>
-                          </div> -->
+                       
                           <div class="mb-5 ">
                             <select class="form-select appearance-none
                               block
@@ -415,18 +393,19 @@
                               transition
                               ease-in-out
                               m-0
-                              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="category">
+                              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="category" id="category">
+                              <% category.forEach(cat=>{ %>
                                 <option selected>Category</option>
                                
-                                <option value="bcd9d67a-e6ab-4603-a73b-aab3b0403385">Electronics</option>
+                                <option value="<%= cat.id %>"><%=cat.name  %></option>
                                 
-                                
+                                <% }) %> 
                             </select>
                           </div>
                         
                         <button
                           class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="submit"
+                          type="button"
                          id="AddBtn"
                           
                         >
@@ -551,7 +530,7 @@
       </footer> -->
     </div>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="/controllers/adminCenter.js"></script>
+    <script type="module" src="/controllers/methods/createManager.js"></script>
 
     <script type="text/javascript">
       /* Make dynamic date appear */

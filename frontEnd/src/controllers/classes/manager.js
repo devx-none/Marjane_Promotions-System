@@ -19,8 +19,7 @@ export class manager {
       };
     
  
-
-
+      
       getPromotion = async ()=>{
 
         const manager = localStorage.getItem('manager');

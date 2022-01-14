@@ -51,13 +51,23 @@ router.post('/add', async (req, res) => {
     admin.email = email;
     admin.center = center;
     admin.password = await hashPassword(password);
+    
 
-    console.log(admin.center);
+    
 
     //Send Email 
     sendEmail(email, password);
     admin = await connection.getRepository("admin_center").save(admin)
 
+    //update adminCenter id in table center
+    let updateCenter =  await connection
+        .createQueryBuilder()
+        .update("center")
+        .set({ adminCenter: admin.id })
+        .where("id = :id", { id: center })
+        .execute();
+     console.log(updateCenter);
+    
     //create log
     const tokensData = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_SUPER_SECRET)
     console.log(tokensData);

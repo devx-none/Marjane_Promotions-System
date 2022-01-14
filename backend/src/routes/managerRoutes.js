@@ -33,6 +33,9 @@ const router = Router();
 //     }
 // })
 
+
+
+
 //get all promotion by category
 router.get('/promotion', isManager, isMorning, async (req, res, next) => {
     try {
@@ -44,7 +47,7 @@ router.get('/promotion', isManager, isMorning, async (req, res, next) => {
             },
             relations: ['category', 'center', 'center.adminCenter']
         })
-
+         
         const start = `${(new Date()).toISOString().split('T')[0]} 00:00:00`
         const end = `${(new Date()).toISOString().split('T')[0]} 11:59:59`
 

@@ -56,6 +56,19 @@ router.get('/add', async (req, res) => {
     })
 })
 
+router.get('/all', async (req, res) => {
+    const connection = getConnection()
+
+    console.log(connection);
+    const category = await connection
+        .getRepository("category")
+        .find()
+        .catch(error => {
+            console.log(error);
+        })
+    res.json(category)
+})
+
 
 
 export { router as Category }
