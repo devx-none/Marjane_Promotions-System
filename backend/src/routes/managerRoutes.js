@@ -58,7 +58,7 @@ router.get('/promotion', isManager, isMorning, async (req, res, next) => {
                 where: {
                     product: { category: manager.category.id },
                     adminCenter: { id: manager.center.adminCenter.id },
-                    createdAt: Between(start, end)
+                    // createdAt: Between(start, end)
                 }
             })
 
@@ -106,15 +106,45 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.post('/all', async (req, res) => {
-    const getcategory = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_MANAGER_SECRET);
+router.get('/all',isAdCenter, async (req, res,next) => {
+    
+    //     const connection = getConnection()
+    //     const managers = await connection.getRepository("manager").findOne({relations: ['center','admin_center','center.adminCenter'] })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
+    // res.json(managers)
+    try {
+        const adminCenter = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_CENTER_SECRET);
         const connection = getConnection()
-        const manager = await connection.getRepository("manager").findOne({
+        const centers = await connection.getRepository("center").findOne({
             where: {
-                id: getcategory.id
-            },
-            relations: ['category', 'center', 'center.adminCenter']
+                adminCenter: adminCenter.id
+            }
         })
+         
+       console.log(centers);
+
+        const managers = await connection
+            .getRepository("manager")
+            .find({
+               
+                where: {
+                    center: centers.id 
+                   
+                    // createdAt: Between(start, end)
+                },
+                relations: ['category']
+            })
+
+
+
+        // //update status the promotion
+
+        res.json(managers)
+    } catch (error) {
+        next(error)
+    }
 
     
 })

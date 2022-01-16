@@ -85,7 +85,7 @@ router.put('/:id',isManager, async (req, res) => {
     let updatePromotion =  await connection
         .createQueryBuilder()
         .update("promotion")
-        .set({ status: req.body.status })
+        .set({ status: 'accepted' })
         .where("id = :id", { id: id })
         .execute();
           //create log

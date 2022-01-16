@@ -23,7 +23,7 @@ export const calculateFidelity = (pourcentage, { name } ,price) => {
 export const isMorning = (req, res, next) => {
     const currentTime = new Date()
     const currentHour = currentTime.getHours()
-    if (currentHour >= 8 && currentHour < 18) {
+    if (currentHour >= 8 && currentHour < 20) {
         next()
     } else {
         next(new Error("The promotions are closed"))

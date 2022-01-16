@@ -2,15 +2,15 @@ const express = require('express');
 const newRouter = express.Router();
 const axios = require('axios');
 
-if (typeof localStorage === "undefined" || localStorage === null) {
-  var LocalStorage = require('node-localstorage').LocalStorage;
-  localStorage = new LocalStorage('./scratch');
-}
 
+/*---------------------------- index --------------------------------*/
 
 newRouter.get("/",(req, res)=>{
     res.render('index');
 });
+
+/*---------------------------- admin --------------------------------*/
+
 newRouter.get('/admin/login',(req, res)=>{
     res.render('admin/login');
 })
@@ -18,58 +18,11 @@ newRouter.get('/admin/login',(req, res)=>{
 newRouter.get("/admin/dashboard",(req, res)=>{
   res.render('admin/dashboard');
 })
-// newRouter.get('/admin/tables',(req, res)=>{
-//   res.render('admin/tables');
-// })
 
-newRouter.get('/adminCenter/login',(req, res)=>{
-  res.render('subAdmin/login');
-})
-
-//page add manager
-newRouter.get('/adminCenter/tables',(req, res)=>{
-  axios.get('http://localhost:5000/category/all')
-  .then(result => {
-    // category = res.data;
-    console.log(result.data);
-    res.render('subAdmin/tables',{category : result.data});
-
-});
-
-  
-})
-
-//page login manager
-newRouter.get('/manager/login',(req, res)=>{
-  res.render('Manager/login');
-})
-//manger dashboard
-newRouter.get('/manager/dashboard',(req, res)=>{
-  res.render('Manager/dashboard');
-})
-//manager tables
-newRouter.get('/manager/tables',(req, res)=>{
-  res.render('Manager/tables');
-})
-
-// admin center dashboard
-newRouter.get('/adminCenter/dashboard',(req, res)=>{
-  res.render('subAdmin/dashboard');
-})
-
-
-
-
-//page promotion 
-newRouter.get('/adminCenter/promotions',(req, res)=>{
-  res.render('subAdmin/promotions');
-
-})
-
-//list admin center
+//list admin center and centers
 newRouter.get('/admin/tables',async(req, res)=>{
  
-
+   
   axios.all([axios.get(`http://127.0.0.1:5000/admin/all`),
   axios.get(`http://localhost:5000/center/all`)])
 .then(axios.spread((admins, centers) => {  
@@ -82,6 +35,88 @@ console.log(admins.data,centers.data);
  
   console.log('success');
 })
+
+/*---------------------------- admin Center--------------------------------*/
+
+newRouter.get('/adminCenter/login',(req, res)=>{
+  res.render('subAdmin/login');
+})
+
+// dashboard
+newRouter.get('/adminCenter/dashboard',(req, res)=>{
+  res.render('subAdmin/dashboard');
+})
+
+// add manager
+newRouter.get('/adminCenter/tables',(req, res)=>{
+  axios.get('http://localhost:5000/category/all')
+  .then(result => {
+    // category = res.data;
+    console.log(result.data);
+    res.render('subAdmin/tables',{category : result.data});
+
+});
+
+})
+
+//get ALL product
+newRouter.get('/adminCenter/promotions',(req, res)=>{
+  axios.get('http://localhost:5000/product/all')
+  .then(result => {
+    // category = res.data;
+    console.log(result.data);
+  res.render('subAdmin/promotions',{products:result.data});
+  })
+})
+
+/*---------------------------- Manager --------------------------------*/
+
+//page login 
+newRouter.get('/manager/login',(req, res)=>{
+  res.render('Manager/login');
+})
+// dashboard
+newRouter.get('/manager/dashboard',(req, res)=>{
+  res.render('Manager/dashboard');
+})
+// Show promotions
+newRouter.get('/manager/tables',(req, res)=>{
+
+  res.render('Manager/tables')
+})
+
+
+/*---------------------------- Logout --------------------------------*/
+
+//admin
+newRouter.get('/admin/logout',(req, res)=>{
+  // localStorage.removeItem('super');
+  res.redirect('/');
+ 
+ });
+
+ //admin Center
+ newRouter.get('/adminCenter/logout',(req, res)=>{
+  //  localStorage.removeItem('admin');
+   res.redirect('/');
+  
+  });
+
+  //Manager
+  newRouter.get('/manager/logout',(req, res)=>{
+  //  localStorage.removeItem('manager');
+   res.redirect('/');
+  
+  });
+ 
+
+
+
+
+
+
+
+
 
 
 
@@ -291,21 +326,5 @@ console.log(admins.data,centers.data);
 
 // });
 
-//logout 
-newRouter.get('/admin/logout',(req, res)=>{
- localStorage.removeItem('super');
- res.redirect('/');
-
-});
-newRouter.get('/adminCenter/logout',(req, res)=>{
-  localStorage.removeItem('admin');
-  res.redirect('/');
- 
- });
- newRouter.get('/manager/logout',(req, res)=>{
-  localStorage.removeItem('manager');
-  res.redirect('/');
- 
- });
 
 module.exports = newRouter ;

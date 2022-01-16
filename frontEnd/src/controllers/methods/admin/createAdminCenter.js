@@ -1,4 +1,4 @@
-import { Admin } from '../classes/index.js';
+import { Admin } from '../../classes/index.js';
 
 const adminCenter = new Admin();
 
@@ -17,4 +17,5 @@ const getAdmins = await adminCenter.createAdminCenter($('#email').value,$('#cent
 location.replace('/admin/tables');
 console.log(getAdmins);
 })
+
 

@@ -1,6 +1,6 @@
-import { manager } from '../classes/index.js';
+import { Manager } from '../../classes/index.js';
 
-const Manager = new manager();
+const manager = new Manager();
 
 var $ = (className) => {
     return document.querySelector(className);
@@ -9,13 +9,14 @@ var $ = (className) => {
   //login
   $('#connect').addEventListener("click",async(e)=>{
     e.preventDefault();
-    const manager = await Manager.LoginManager($('#email').value,$('#password').value)
-
-    if(adminCenter.data.response){
     
-        console.log(adminCenter.data.response);
+    await manager.LoginManager($('#email').value,$('#password').value)
+    if(manager.data.token){
+     
+      localStorage.setItem('manager',manager.data.token)
+      console.log('success');
+      location.replace('/manager/dashboard');
     }
-    location.replace('/manager/dashboard');
      
     console.log(manager);
     })

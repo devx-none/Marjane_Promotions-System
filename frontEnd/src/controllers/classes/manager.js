@@ -1,4 +1,4 @@
-export class manager {
+export class Manager {
     data;
 
     LoginManager = async (email , password ) => {
@@ -27,25 +27,35 @@ export class manager {
         myHeaders.append("Accept", "application/json");
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("authorization", `bearer ${manager}`);
-        let raw = JSON.stringify({
-          name ,
-          email ,
-          center ,
-          category
-        });
+
         let requestOptions = {
-          method: "POST",
+          method: "GET",
           headers: myHeaders,
-          body: raw,
+         
         };
-        let result = await fetch(`http://127.0.0.1:5000/promotion/add`, requestOptions);
+        let result = await fetch(`http://localhost:5000/manager/promotion`, requestOptions);
         return (this.data = await result.json());
       };
+      
+      updatePromotion = async (id)=>{
+        const manager = localStorage.getItem('manager');
+        let myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("authorization", `bearer ${manager}`);
 
+        let requestOptions = {
+          method: "PUT",
+          headers: myHeaders,
+         
+        };
+        let result = await fetch(`http://localhost:5000/promotion/${id}`, requestOptions);
+        return (this.data = await result.json());
+      };
+      }
       
       
 
 
 
 
-}

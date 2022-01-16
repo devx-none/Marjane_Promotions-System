@@ -55,10 +55,12 @@ router.post('/addManger',isAdCenter, async (req, res, next) => {
     console.log(getAdminCenter.id);
         const connection = getConnection()
         const getcenter = await connection.getRepository("center").findOne({
+           
             where: {
                 adminCenter: getAdminCenter.id
             }
         })
+        console.log(getcenter);
 
     let managerRayon = new manager();
     managerRayon.name = name
@@ -81,7 +83,7 @@ router.post('/addManger',isAdCenter, async (req, res, next) => {
     const tokensData = verifyToken(req.headers.authorization.split(" ")[1], process.env.JWT_CENTER_SECRET)
     console.log(tokensData);
     let logMsg = new logs();
-    logMsg.message = ` Admin Center :${tokensData.id} created an Manger Center: ${managerRayon.id} `;
+    logMsg.message = ` Admin Center : `;
     logMsg.target = tokensData.id;
     logMsg.status = 'created';
     logMsg = await connection.getRepository("logs").save(logMsg).catch(error => {
@@ -125,6 +127,18 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.get('/statistics', async (req, res) => {
+    const connection = getConnection()
+   
+    console.log(connection);
+    const promo = await connection
+        .getRepository("promotion")
+        .findAndCount()
+        .catch(error => {
+            console.log(error);
+        })
+    res.json(promo);
+})
 
 
 

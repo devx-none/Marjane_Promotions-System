@@ -239,10 +239,10 @@
                           <h5
                             class="text-blueGray-400 uppercase font-bold text-xs"
                           >
-                            Promotions
+                            admin center
                           </h5>
                           <span class="font-semibold text-xl text-blueGray-700">
-                            350,897
+                            <%= adminsCenter.length %> 
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
@@ -271,7 +271,7 @@
                             Centers
                           </h5>
                           <span class="font-semibold text-xl text-blueGray-700">
-                            2,356
+                            <%= centers.length %> 
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
@@ -300,7 +300,7 @@
                             Managers
                           </h5>
                           <span class="font-semibold text-xl text-blueGray-700">
-                            924
+                            0
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
@@ -379,7 +379,7 @@
                         
                         <button
                           class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="submit"
+                          type="button"
                          id="btnAdd"
                           
                         >
@@ -441,7 +441,7 @@
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                         >
                           <!-- <i class="fas fa-circle text-orange-500 mr-2"></i> -->
-                          <%=admin.center %> 
+                          <%=admin.center.city %> 
                         </td>
                         <td
                           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
@@ -505,7 +505,7 @@
     </div>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="/controllers/methods/createAdminCenter.js"></script>
+    <script type="module" src="/controllers/methods/admin/createAdminCenter.js"></script>
 
     <script type="text/javascript">
       /* Make dynamic date appear */

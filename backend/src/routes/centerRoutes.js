@@ -20,10 +20,10 @@ const router = Router();
 
 router.get('/all', async (req, res) => {
     const connection = getConnection()
-    console.log(connection);
+    console.log("connection");
     const centers = await connection
         .getRepository("center")
-        .find()
+        .find({where: {adminCenter : null}})
         .catch(error => {
             console.log(error);
         })

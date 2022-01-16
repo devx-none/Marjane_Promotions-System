@@ -42,7 +42,7 @@ export class AdminCenter {
 
 
       createPromotion = async (pourcentage,product)=>{
-        const adminCenter = localStorage.getItem('adminCenter');
+        const adminCenter = localStorage.getItem('admin');
         let myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
         myHeaders.append("Content-Type", "application/json");
@@ -61,9 +61,26 @@ export class AdminCenter {
         return (this.data = await result.json());
       };
 
+      //List Manager 
+      ListManagers = async () => {
+        const admin = localStorage.getItem('admin');
+        let myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("authorization", `bearer ${admin}`);
       
+        let requestOptions = {
+          method: "GET",
+          headers: myHeaders
+        };
+        let result = await fetch(`http://localhost:5000/manager/all`, requestOptions);
+         
+        return (this.data = await result.json());
+      };
       
 
+      
+      
 
 
 

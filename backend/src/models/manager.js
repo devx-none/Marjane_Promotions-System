@@ -21,7 +21,7 @@ export class manager {
     @CreateDateColumn()
     createdAt = undefined;
 
-    @OneToOne(() => center, cent => cent.managers, { cascade: true })
+    @ManyToOne(() => center, cent => cent.managers, { cascade: true })
     @JoinColumn()
     center
 

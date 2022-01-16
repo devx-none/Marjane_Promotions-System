@@ -1,4 +1,4 @@
-import { AdminCenter } from '../classes/index.js';
+import { AdminCenter } from '../../classes/index.js';
 
 const adminCenter = new AdminCenter();
 

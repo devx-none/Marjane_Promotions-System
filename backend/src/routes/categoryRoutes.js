@@ -59,7 +59,7 @@ router.get('/add', async (req, res) => {
 router.get('/all', async (req, res) => {
     const connection = getConnection()
 
-    console.log(connection);
+    console.log("connection");
     const category = await connection
         .getRepository("category")
         .find()
