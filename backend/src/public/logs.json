@@ -467,5 +467,12 @@
       "message": "Super Admin : 1dd2f3e5-bfe3-43e7-9f9b-ab4851355f2d created an admin Center: 394a8206-7870-434a-9dcd-fd786af0ba3e ",
       "status": "created",
       "createdAt": "2022-01-16T21:52:55.697Z"
+   },
+   {
+      "id": "49da30c3-57d4-4cc6-96d2-2856f0237c60",
+      "target": "4641250b-e3be-4ade-b1ba-c8b0fe66ae3b",
+      "message": " Admin Center : ",
+      "status": "created",
+      "createdAt": "2022-01-16T22:00:44.857Z"
    }
 ]

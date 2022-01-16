@@ -19,7 +19,7 @@ var $ = (className) => {
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
             >
               <span class="ml-3 font-bold text-blueGray-600">
-              ${e.product.name}
+              ${e.product.name} 
               </span>
             </th>
             <td
@@ -68,13 +68,15 @@ var $ = (className) => {
             >
               Accept
             </button>
-            <input type="text" value="${e.id}" hidden="true"/>
+            <input type="text" value="${e.id}" hidden="true" id="status"/>
               </div>
             </td>
           </tr>
+          
             
             `;
             $('tbody').appendChild(tr);
+            
         });
     }
         }
@@ -83,8 +85,8 @@ var $ = (className) => {
   
     $('#accept').addEventListener('click',async(e)=>{
           e.preventDefault();
-    
-    await manager.updatePromotion($('#accept').value)
+    alert('Please enter')
+    await manager.updatePromotion($('#status').value)
       location.reload();
     console.log(manager);
     })

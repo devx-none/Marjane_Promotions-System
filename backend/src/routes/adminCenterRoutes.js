@@ -127,18 +127,18 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get('/statistics', async (req, res) => {
-    const connection = getConnection()
+// router.get('/statistics', async (req, res) => {
+//     const connection = getConnection()
    
-    console.log(connection);
-    const promo = await connection
-        .getRepository("promotion")
-        .findAndCount()
-        .catch(error => {
-            console.log(error);
-        })
-    res.json(promo);
-})
+//     console.log(connection);
+//     const promo = await connection
+//         .getRepository("promotion")
+//         .findAndCount()
+//         .catch(error => {
+//             console.log(error);
+//         })
+//     res.json(promo);
+// })
 
 
 
